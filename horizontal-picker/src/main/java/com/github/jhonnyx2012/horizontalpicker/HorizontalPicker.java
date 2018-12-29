@@ -39,6 +39,8 @@ public class HorizontalPicker extends LinearLayout implements HorizontalPickerLi
     private int mDayOfWeekTextColor = -1;
     private int mUnselectedDayTextColor = -1;
 
+    private boolean selectOnScroll = true;
+
     public HorizontalPicker(Context context) {
         super(context);
         internInit();
@@ -118,7 +120,8 @@ public class HorizontalPicker extends LinearLayout implements HorizontalPickerLi
                 mTodayDateTextColor,
                 mTodayDateBackgroundColor,
                 mDayOfWeekTextColor,
-                mUnselectedDayTextColor);
+                mUnselectedDayTextColor,
+                selectOnScroll);
     }
 
     private int getColor(int colorId) {
@@ -225,6 +228,11 @@ public class HorizontalPicker extends LinearLayout implements HorizontalPickerLi
 
     public HorizontalPicker setMonthPattern(String pattern) {
         mMonthPattern = pattern;
+        return this;
+    }
+
+    public HorizontalPicker setSelectOnScroll(boolean selectOnScroll) {
+        this.selectOnScroll = selectOnScroll;
         return this;
     }
 }

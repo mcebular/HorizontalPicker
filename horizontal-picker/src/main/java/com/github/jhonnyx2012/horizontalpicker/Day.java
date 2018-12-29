@@ -2,16 +2,16 @@ package com.github.jhonnyx2012.horizontalpicker;
 
 import org.joda.time.DateTime;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 /**
  * Created by jhonn on 28/02/2017.
  */
 public class Day {
+
     private DateTime date;
     private boolean selected;
+
     private String monthPattern = "MMMM YYYY";
 
     public Day(DateTime date) {
