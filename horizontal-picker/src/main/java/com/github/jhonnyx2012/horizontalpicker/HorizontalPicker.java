@@ -131,7 +131,14 @@ public class HorizontalPicker extends LinearLayout {
         return rvDays.post(action);
     }
 
+    /**
+     * Number of days to be generated in the view. Default value is 90 days.
+     * @param days number of days to generate
+     * @throws IllegalArgumentException if passed number of days is negative
+     * @return this HorizontalPicker instance for chaining method calls
+     */
     public HorizontalPicker setDays(int days) {
+        if (days < 0) throw new IllegalArgumentException("number of days must be positive");
         this.days = days;
         return this;
     }
@@ -140,7 +147,15 @@ public class HorizontalPicker extends LinearLayout {
         return days;
     }
 
+    /**
+     * Number of days to offset from today. Setting offset to 0 will make all but today's day in the
+     * future. Default value is 7 days.
+     * @param offset number of days before today's date, must be positive
+     * @throws IllegalArgumentException if passed offset is negative
+     * @return this HorizontalPicker instance for chaining method calls
+     */
     public HorizontalPicker setOffset(int offset) {
+        if (offset < 0) throw new IllegalArgumentException("offset must be positive");
         this.offset = offset;
         return this;
     }
