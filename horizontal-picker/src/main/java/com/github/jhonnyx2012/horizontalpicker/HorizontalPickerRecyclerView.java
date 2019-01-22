@@ -1,6 +1,7 @@
 package com.github.jhonnyx2012.horizontalpicker;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
@@ -49,22 +50,24 @@ public class HorizontalPickerRecyclerView extends RecyclerView implements OnItem
 
     //
 
-    public void init(Context context, final int daysToPlus, final int initialOffset, final int mBackgroundColor, final int mDateSelectedColor, final int mDateSelectedTextColor, final int mTodayDateTextColor, final int mTodayDateBackgroundColor, final int mDayOfWeekTextColor, final int mUnselectedDayTextColor, final boolean selectOnScroll) {
+    public void init(final int daysToPlus, final int initialOffset, final int mBackgroundColor, final boolean selectOnScroll) {
         this.offset = initialOffset;
         this.lastPosition = initialOffset;
         this.selectOnScroll = selectOnScroll;
 
-        layoutManager=new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+        layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         setLayoutManager(layoutManager);
 
         post(new Runnable() {
             @Override
             public void run() {
-                itemWidth=getMeasuredWidth()/7;
-                adapter=new HorizontalPickerAdapter((int) itemWidth,HorizontalPickerRecyclerView.this, getContext(),daysToPlus,initialOffset,mBackgroundColor,mDateSelectedColor,mDateSelectedTextColor,mTodayDateTextColor,
-                        mTodayDateBackgroundColor,
-                        mDayOfWeekTextColor,
-                        mUnselectedDayTextColor,
+                itemWidth = getMeasuredWidth() / 7f;
+                adapter = new HorizontalPickerAdapter(
+                        (int) itemWidth,
+                        HorizontalPickerRecyclerView.this,
+                        getContext(),
+                        daysToPlus,
+                        initialOffset,
                         selectOnScroll);
                 setAdapter(adapter);
                 LinearSnapHelper snapHelper=new LinearSnapHelper();
