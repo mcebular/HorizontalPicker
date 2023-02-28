@@ -37,7 +37,7 @@ Requirements
 Getting Started
 ---------------
 
-In your app module's Gradle config file, add the following dependency:
+In your app module's Gradle config file, add [Jitpack repository](https://jitpack.io/) and the following dependency:
 ```groovy
 dependencies {
     implementation 'com.github.mcebular:HorizontalPicker:2.0.0'
