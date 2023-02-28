@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:orientation="vertical"
-    android:id="@+id/base">
+    android:orientation="vertical">
 
     <TextView
-        android:text="JUE"
-        android:id="@+id/tvWeekDay"
+        tools:text="JUE"
+        android:id="@+id/textViewWeekDay"
         android:textAllCaps="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,18 +20,16 @@
         android:layout_gravity="center" />
 
     <TextView
-        android:text="18"
+        tools:text="18"
         android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textAlignment="center"
         android:gravity="center"
-        android:id="@+id/tvDay"
+        android:id="@+id/textViewDay"
         android:layout_gravity="center"
         android:textColor="@color/textColorPrimary"
-        android:paddingBottom="6dp"
-        android:paddingTop="6dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="8dp" />
 </LinearLayout>

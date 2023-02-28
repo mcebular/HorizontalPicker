@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.jhonnyx.horizontalpickerexample.MainActivity">
+    android:layout_height="match_parent">
 
-    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+    <com.github.mcebular.horizontalpicker.HorizontalPicker
         android:id="@+id/datePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </LinearLayout>
