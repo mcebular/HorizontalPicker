@@ -2,8 +2,10 @@ package com.jhonnyx.horizontalpickerexample;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.jhonnyx2012.horizontalpicker.DatePickerListener;
 import com.github.jhonnyx2012.horizontalpicker.HorizontalPicker;
 
@@ -19,15 +21,15 @@ public class MainActivity extends AppCompatActivity implements DatePickerListene
         picker.setListener(this)
                 .setDays(120)
                 .setOffset(7)
-                .setDateSelectedColor(Color.DKGRAY)
-                .setDateSelectedTextColor(Color.WHITE)
-                .setMonthAndYearTextColor(Color.DKGRAY)
-                .setTodayButtonTextColor(getResources().getColor(R.color.colorPrimary))
-                .setTodayDateTextColor(getResources().getColor(R.color.colorPrimary))
-                .setTodayDateBackgroundColor(Color.GRAY)
-                .setUnselectedDayTextColor(Color.DKGRAY)
-                .setDayOfWeekTextColor(Color.DKGRAY )
-                .setUnselectedDayTextColor(getResources().getColor(R.color.primaryTextColor))
+//                .setDateSelectedColor(Color.DKGRAY)
+//                .setDateSelectedTextColor(Color.WHITE)
+//                .setMonthAndYearTextColor(Color.DKGRAY)
+//                .setTodayButtonTextColor(getResources().getColor(R.color.colorPrimary))
+//                .setTodayDateTextColor(getResources().getColor(R.color.colorPrimary))
+//                .setTodayDateBackgroundColor(Color.GRAY)
+//                .setUnselectedDayTextColor(Color.DKGRAY)
+//                .setDayOfWeekTextColor(Color.DKGRAY )
+//                .setUnselectedDayTextColor(getResources().getColor(R.color.primaryTextColor))
                 .showTodayButton(false)
                 .init();
         picker.setBackgroundColor(Color.LTGRAY);

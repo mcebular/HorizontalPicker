@@ -5,18 +5,17 @@ import android.app.AlarmManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v4.graphics.drawable.DrawableCompat;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.recyclerview.widget.RecyclerView;
+
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by jhonn on 22/02/2017.

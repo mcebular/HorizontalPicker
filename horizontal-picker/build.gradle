@@ -25,11 +25,11 @@ ext {
 }
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0.6"
     }
@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     api 'joda-time:joda-time:2.10.1'
 }
 
